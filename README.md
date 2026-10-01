@@ -6,15 +6,6 @@ A responsive, dependency-free Klondike game for GitHub Pages. Hard mode uses thr
 
 Open `index.html` in a browser. No install or build is needed.
 
-## Publish on GitHub
-
-1. Create a public repository named `solitaire`.
-2. Upload `index.html`, `style.css`, `engine.js`, and `app.js` to the repository root.
-3. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then **main** and **/(root)**. Save.
-4. GitHub will display the live URL, normally `https://YOUR-USERNAME.github.io/solitaire/`.
-
-Keep this separate from an existing portfolio repository. It can be linked from your portfolio once published.
-
 ## Controls
 
 - Click or tap a card, then click or tap its destination.
