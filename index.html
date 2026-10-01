@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Classic hard solitaire. Three-card draw, a quiet table, and one more game.">
+  <title>Solitaire — Draw Three</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230c3933'/%3E%3Ctext x='20' y='30' text-anchor='middle' font-size='32' fill='%23ecd6a0'%3E%E2%99%A0%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script defer src="engine.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<main>
+  <header><div class="brand"><span class="brand-suit">♠</span><h1>Solitaire</h1><span class="mode">HARD · DRAW 3</span></div><button id="rules" class="quiet">How to play</button></header>
+  <section class="toolbar" aria-label="Game controls">
+    <div class="stats"><div><span>TIME</span><strong id="time">00:00</strong></div><div><span>MOVES</span><strong id="moves">0</strong></div><div><span>FOUNDATION</span><strong id="progress">0 / 52</strong></div></div>
+    <div class="actions"><button id="undo">↶ <span>Undo</span></button><button id="hint">Hint</button><button id="restart">Restart</button><button id="new" class="primary">New game</button></div>
+  </section>
+  <section id="board" aria-label="Solitaire table">
+    <div class="top-row"><div id="stock-area"><button id="stock" class="slot" aria-label="Draw three cards"></button><span class="pile-label" id="stock-count"></span></div><div id="waste" class="waste" aria-label="Waste pile"></div><div class="spacer"></div><div id="foundations" class="foundations"></div></div>
+    <div id="tableau" class="tableau"></div>
+  </section>
+  <footer><span id="message" role="status" aria-live="polite">Select a card, then its destination. Double-click to send it home.</span><span class="footer-mode">THREE AT A TIME. ONE MOVE AHEAD.</span></footer>
+</main>
+<dialog id="help"><button class="close" aria-label="Close rules">×</button><span class="eyebrow">KLONDIKE · HARD</span><h2>A little patience.</h2><p>Move all 52 cards to the four foundations, building each suit from Ace to King.</p><p>Build the seven columns downward in alternating colors. You can move a card or a complete face-up sequence. Only Kings can fill an empty column.</p><p>The stock turns over <b>three cards</b>. Only the top waste card is playable. You may cycle through the stock as often as you like.</p><p>Click or tap a card, then a destination. You can also drag cards, or double-click a top card to move it to a foundation.</p><p>Use <b>Space</b> to draw, <b>Ctrl / ⌘ + Z</b> to undo, and <b>Escape</b> to clear your selection. Tab and Enter also work.</p><p class="muted">Deals are random and are not guaranteed winnable. Hints suggest legal moves, not a guaranteed solution.</p></dialog>
+<dialog id="confirm"><h2 id="confirm-title">New game?</h2><p>Your current progress will be cleared.</p><div class="dialog-actions"><button id="cancel">Keep playing</button><button id="confirm-ok" class="primary">Deal cards</button></div></dialog>
+<dialog id="victory"><span class="win-suit">♠ ♥ ♣ ♦</span><h2>Beautifully played.</h2><p id="win-detail"></p><button id="win-new" class="primary">Play again</button><button id="win-close">View table</button></dialog>
+</body></html>
